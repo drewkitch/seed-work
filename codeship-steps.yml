@@ -1,0 +1,7 @@
+- name: perform seed work
+  service: app-seeder
+  command: touch /seed-work/seeded-file.txt
+
+- name: check on seeded work baked into main app
+  service: main-app
+  command: ls /seed-work/seeded-file.txt

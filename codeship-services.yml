@@ -1,0 +1,10 @@
+app-seeder:
+  build:
+    image: codeship/app-seeder
+    dockerfile: Dockerfile.seeder
+  volumes:
+    - ./seed-work:/seed-work
+main-app:
+  build:
+    image: codeship/main-app
+    dockerfile: Dockerfile
