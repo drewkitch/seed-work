@@ -1,10 +1,8 @@
 app-seeder:
-  build:
-    image: codeship/app-seeder
-    dockerfile: Dockerfile.seeder
+  image: busybox
   volumes:
     - ./seed-work:/seed-work
 main-app:
   build:
     image: codeship/main-app
-    dockerfile: Dockerfile
+    dockerfile: Dockerfile # busybox base image, now with `COPY` of seeded work
